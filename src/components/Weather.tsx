@@ -7,7 +7,7 @@ const Weather = () => {
       <input
         type="text"
         placeholder="Enter city"
-        className="text-lg p-1 outline-none bg-transparent border-b border-white"
+        className="text-lg p-1 outline-none bg-transparent border-b border-white placeholder:text-gray-300"
       />
       <img src={pause} alt="weather" className="w-8 h-8 object-cover" />
       <div className="flex flex-col gap-2">some data</div>
