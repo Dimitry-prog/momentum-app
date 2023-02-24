@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState } from 'react';
-import pause from '../images/pause.svg';
 import { useAppDispatch } from '../hooks/useTypedDispatch';
 import { useAppSelector } from '../hooks/useTypedSelector';
 import { getWeatherData } from '../store/actions/weatherAction';
