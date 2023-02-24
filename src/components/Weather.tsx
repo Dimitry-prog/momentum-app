@@ -7,7 +7,6 @@ const Weather: FC = () => {
   const [city, setCity] = useState<string>('Gomel');
   const dispatch = useAppDispatch();
   const { weatherData, error } = useAppSelector((state) => state.weather);
-  console.log(weatherData);
   const errorMsg = error as string;
 
   useEffect(() => {
