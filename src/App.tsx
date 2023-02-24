@@ -1,8 +1,8 @@
-import Player from 'components/Player';
-import Quote from 'components/Quote';
-import Timelapse from 'components/Timelapse';
-import Weather from 'components/Weather';
 import React from 'react';
+import Weather from './components/Weather';
+import Timelapse from './components/Timelapse';
+import Quote from './components/Quote';
+import Player from './components/Player';
 
 const App = () => {
   return (
