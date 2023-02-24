@@ -16,13 +16,11 @@ export const getWeatherData = createAsyncThunk(
 
       return data;
     } catch (e) {
-      // const error: AxiosError<KnownError> = e as any;
       const error = e as AxiosError<KnownError>;
       if (!error.response) {
         throw e;
       }
       return rejectWithValue(error.response.data.message);
-      // return rejectWithValue(error.message);
     }
   }
 );

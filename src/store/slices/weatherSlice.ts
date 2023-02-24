@@ -25,6 +25,7 @@ const weatherSlice = createSlice({
       })
       .addCase(getWeatherData.fulfilled, (state, action) => {
         state.loading = false;
+        state.error = null;
         state.weatherData = action.payload;
       })
       .addCase(getWeatherData.rejected, (state, action) => {
