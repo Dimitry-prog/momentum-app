@@ -1,4 +1,6 @@
 import React from 'react';
+import { songs } from '../utils/contants';
+import SongTrack from './SongTrack';
 
 const Player = () => {
   return (
@@ -17,7 +19,13 @@ const Player = () => {
           type="button"
         ></button>
       </div>
-      <ul className="flex flex-col"></ul>
+      <ul className="flex flex-col gap-1">
+        {songs.map((song) => (
+          <li key={song.id} className="text-white text-lg">
+            <SongTrack src={song.src} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
