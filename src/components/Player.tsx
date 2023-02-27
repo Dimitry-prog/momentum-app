@@ -22,6 +22,12 @@ const Player = () => {
     songRef.current!.play();
   }, [songIndex, setCurrentSong, setSongIndex, songRef]);
 
+  const handleStartPlaySong = (index: number) => {
+    setSongIndex(index);
+    setCurrentSong(songs[index]);
+    setIsPlaying(true);
+  };
+
   return (
     <div className="flex flex-col gap-y-5">
       <SongButtons
@@ -33,16 +39,13 @@ const Player = () => {
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
       />
-      {/*<SongTrack*/}
-      {/*  song={songs[songIndex]}*/}
-      {/*  songIndex={songIndex}*/}
-      {/*  songRef={songRef}*/}
-      {/*  isPlaying={isPlaying}*/}
-      {/*  handleNextSong={handleNextSong}*/}
-      {/*/>*/}
       <ul className="flex flex-col gap-1">
         {songs.map((song) => (
-          <li key={song.id} className="text-white text-lg">
+          <li
+            onClick={() => handleStartPlaySong(song.id - 1)}
+            key={song.id}
+            className="text-white text-lg flex gap-1"
+          >
             <SongTrack
               currentSong={currentSong}
               song={song}

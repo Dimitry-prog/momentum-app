@@ -36,9 +36,6 @@ const SongButtons: FC<SongButtonsProps> = ({
     }
     setIsPlaying(true);
     songRef.current!.play();
-    if (songRef.current!.duration) {
-      console.log("i'm here");
-    }
   }, [songIndex, setCurrentSong, setSongIndex, songRef]);
 
   useEffect(() => {
