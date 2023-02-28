@@ -21,8 +21,6 @@ const Quote = () => {
     handleNewQuote();
   }, []);
 
-  useEffect(() => {}, [quote]);
-
   return (
     <div className="flex flex-col gap-2 md:gap-4 items-center text-white">
       <button
