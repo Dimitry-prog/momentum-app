@@ -30,3 +30,13 @@ export const songs: ISong[] = [
     duration: '01:51',
   },
 ];
+
+type ILanguages = {
+  en: string;
+  ru: string;
+};
+
+export const languages: ILanguages = {
+  en: 'English',
+  ru: 'Russian',
+};
