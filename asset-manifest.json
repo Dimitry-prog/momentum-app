@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/https,://dimitry-prog.github.io/momentum-app/static/css/main.ec118df7.css",
+    "main.js": "/https,://dimitry-prog.github.io/momentum-app/static/js/main.63f9f54b.js",
+    "static/media/summer_wind.mp3": "/https,://dimitry-prog.github.io/momentum-app/static/media/summer_wind.b44bd629d4635aae13cb.mp3",
+    "static/media/river_flows_in_you.mp3": "/https,://dimitry-prog.github.io/momentum-app/static/media/river_flows_in_you.a656f498fb59c73243d1.mp3",
+    "static/media/ennio_morricone.mp3": "/https,://dimitry-prog.github.io/momentum-app/static/media/ennio_morricone.21bf1950ab63b478229a.mp3",
+    "static/media/aqua_caelestis.mp3": "/https,://dimitry-prog.github.io/momentum-app/static/media/aqua_caelestis.7c76faa5999017ffec2f.mp3",
+    "static/media/reload.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/reload.91f316184109e60f0baf.svg",
+    "index.html": "/https,://dimitry-prog.github.io/momentum-app/index.html",
+    "static/media/play-prev.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/play-prev.896b591f823abe420586.svg",
+    "static/media/play-next.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/play-next.0f3a610b0a2f93528cb6.svg",
+    "static/media/getFetch.cjs": "/https,://dimitry-prog.github.io/momentum-app/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "static/media/pause.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/pause.38a38cb8b4bbbf369666.svg",
+    "static/media/play.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/play.61d46a084bd961ef0b33.svg",
+    "static/media/slider-prev.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/slider-prev.f5f3a4aa550dd30baa35.svg",
+    "static/media/slider-next.svg": "/https,://dimitry-prog.github.io/momentum-app/static/media/slider-next.320ea03df2fc81496da0.svg",
+    "main.ec118df7.css.map": "/https,://dimitry-prog.github.io/momentum-app/static/css/main.ec118df7.css.map",
+    "main.63f9f54b.js.map": "/https,://dimitry-prog.github.io/momentum-app/static/js/main.63f9f54b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec118df7.css",
+    "static/js/main.63f9f54b.js"
+  ]
+}

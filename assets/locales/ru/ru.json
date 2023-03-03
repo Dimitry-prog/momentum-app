@@ -1,0 +1,12 @@
+{
+  "greeting_morning": "Доброе утро",
+  "greeting_afternoon": "Добрый день",
+  "greeting_evening": "Добрый вечер",
+  "greeting_night": "Спокойной ночи",
+  "greeting": "Привет путешественник",
+  "placeholderName": "Введите ваше имя",
+  "placeholderCity": "Введите город",
+  "weather_feels_like": "Как ощущается",
+  "weather_wind": "Ветер",
+  "weather_humidity": "Влажность"
+}
