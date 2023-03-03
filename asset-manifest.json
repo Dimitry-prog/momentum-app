@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/momentum-app/static/css/main.03bb066c.css",
-    "main.js": "/momentum-app/static/js/main.d655cafb.js",
+    "main.js": "/momentum-app/static/js/main.d613372b.js",
     "static/media/summer_wind.mp3": "/momentum-app/static/media/summer_wind.b44bd629d4635aae13cb.mp3",
     "static/media/river_flows_in_you.mp3": "/momentum-app/static/media/river_flows_in_you.a656f498fb59c73243d1.mp3",
     "static/media/ennio_morricone.mp3": "/momentum-app/static/media/ennio_morricone.21bf1950ab63b478229a.mp3",
@@ -16,10 +16,10 @@
     "static/media/slider-prev.svg": "/momentum-app/static/media/slider-prev.f5f3a4aa550dd30baa35.svg",
     "static/media/slider-next.svg": "/momentum-app/static/media/slider-next.320ea03df2fc81496da0.svg",
     "main.03bb066c.css.map": "/momentum-app/static/css/main.03bb066c.css.map",
-    "main.d655cafb.js.map": "/momentum-app/static/js/main.d655cafb.js.map"
+    "main.d613372b.js.map": "/momentum-app/static/js/main.d613372b.js.map"
   },
   "entrypoints": [
     "static/css/main.03bb066c.css",
-    "static/js/main.d655cafb.js"
+    "static/js/main.d613372b.js"
   ]
 }
