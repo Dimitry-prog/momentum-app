@@ -24,7 +24,7 @@ const Timelapse: FC = () => {
     const currentTime = date.toLocaleTimeString(timeFormat);
     setTime(currentTime);
     showDate(localStorage.getItem('i18nextLng'));
-    getTimeOfDay(localStorage.getItem('i18nextLng'));
+    getTimeOfDay();
     setInterval(() => {
       showTime(localStorage.getItem('i18nextLng'));
     }, 1000);
@@ -46,7 +46,7 @@ const Timelapse: FC = () => {
     setDate(currentDate);
   };
 
-  const getTimeOfDay = (lang: string | null): string => {
+  const getTimeOfDay = (): string => {
     const date = new Date();
     const hours = date.getHours();
 
@@ -79,9 +79,7 @@ const Timelapse: FC = () => {
       <div className="text-6xl font-semibold tracking-widest md:text-8xl">{time}</div>
       <div className="text-2xl md:text-4xl">{date}</div>
       <div className="grid grid-cols-2 items-center gap-2">
-        <h1 className="text-4xl md:text-6xl text-right">
-          {getTimeOfDay(localStorage.getItem('i18nextLng'))}
-        </h1>
+        <h1 className="text-4xl md:text-6xl text-right">{getTimeOfDay()}</h1>
         <input
           value={name || ''}
           onChange={handleChangeName}
