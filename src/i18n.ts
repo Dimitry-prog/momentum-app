@@ -11,6 +11,6 @@ i18next
     debug: true,
     fallbackLng: 'en',
     backend: {
-      loadPath: '/assets/locales/{{lng}}/{{lng}}.json',
+      loadPath: '/momentum-app/assets/locales/{{lng}}/{{lng}}.json',
     },
   });
