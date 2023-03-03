@@ -1,6 +1,6 @@
 {
   "name": "momentum-app",
-  "homepage": "https,://dimitry-prog.github.io/momentum-app/",
+  "homepage": "https://dimitry-prog.github.io/momentum-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
