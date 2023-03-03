@@ -1,16 +1,11 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const Timelapse: FC = () => {
   const [time, setTime] = useState<string>('');
   const [date, setDate] = useState<string>('');
-  const [name, setName] = useState<string>(() => {
-    const savedItem = localStorage.getItem('name');
-    if (savedItem) {
-      return JSON.parse(savedItem);
-    }
-    return '';
-  });
+  const [name, setName] = useLocalStorage('name', '');
   const { t } = useTranslation();
 
   const showTime = (lang: string | null): void => {

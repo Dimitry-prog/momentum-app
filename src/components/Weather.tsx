@@ -1,22 +1,18 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect } from 'react';
 import { useAppDispatch } from '../hooks/useTypedDispatch';
 import { useAppSelector } from '../hooks/useTypedSelector';
 import { getWeatherData } from '../store/actions/weatherAction';
 import { useTranslation } from 'react-i18next';
+import useDebounce from '../hooks/useDebounce';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const Weather: FC = () => {
-  const [city, setCity] = useState<string>(() => {
-    const savedItem = localStorage.getItem('city');
-    if (savedItem) {
-      return JSON.parse(savedItem);
-    }
-    return 'Gomel';
-  });
+  const [city, setCity] = useLocalStorage('city', 'Gomel');
   const dispatch = useAppDispatch();
   const { weatherData, error } = useAppSelector((state) => state.weather);
-  console.log(weatherData);
   const errorMsg = error as string;
   const { t } = useTranslation();
+  const debounce = useDebounce(city, 500);
 
   const handleChangeCity = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCity(e.target.value);
@@ -26,11 +22,11 @@ const Weather: FC = () => {
   useEffect(() => {
     dispatch(
       getWeatherData({
-        city,
+        city: debounce,
         lang: localStorage.getItem('i18nextLng'),
       })
     );
-  }, [city, localStorage.getItem('i18nextLng')]);
+  }, [debounce, localStorage.getItem('i18nextLng')]);
 
   return (
     <div className="flex flex-col gap-2 text-white">
