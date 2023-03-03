@@ -1,5 +1,6 @@
 {
   "name": "momentum-app",
+  "homepage": "https,://dimitry-prog.github.io/momentum-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "deploy": "npm run build && npm run gh-pages",
+    "gh-pages": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
