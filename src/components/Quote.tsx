@@ -8,6 +8,7 @@ import { IQuote } from '../types/quoteModel';
 const Quote = () => {
   const [quote, setQuote] = useState<IQuote>();
   const { quotes } = useAppSelector((state) => state.quote);
+  const { quote: isShowQuote } = useAppSelector((state) => state.settings.isShow);
   const dispatch = useAppDispatch();
 
   const handleNewQuote = () => {
@@ -22,7 +23,11 @@ const Quote = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2 md:gap-4 items-center text-white">
+    <div
+      className={`flex flex-col gap-2 md:gap-4 items-center text-white ${
+        isShowQuote ? 'hidden' : ''
+      } transition-all duration-500`}
+    >
       <button
         onClick={handleNewQuote}
         className="w-8 h-8 bg-cover bg-center bg-[url('./images/reload.svg')] opacity-80 hover:opacity-100 duration-1000 hover:rotate-180"

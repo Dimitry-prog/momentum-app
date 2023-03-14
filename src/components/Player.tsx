@@ -3,12 +3,14 @@ import { songs } from '../utils/contants';
 import SongTrack from './SongTrack';
 import SongButtons from './SongButtons';
 import { ISong } from '../types/playerModel';
+import { useAppSelector } from '../hooks/useTypedSelector';
 
 const Player = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [songIndex, setSongIndex] = useState<number>(0);
   const [currentSong, setCurrentSong] = useState<ISong>(songs[songIndex]);
   const songRef = useRef<HTMLAudioElement | null>(null);
+  const { player } = useAppSelector((state) => state.settings.isShow);
 
   const handleNextSong = useCallback(() => {
     if (songIndex >= songs.length - 1) {
@@ -29,7 +31,7 @@ const Player = () => {
   };
 
   return (
-    <div className="flex flex-col gap-y-5">
+    <div className={`flex flex-col gap-y-5 ${player ? 'hidden' : ''} transition-all duration-500`}>
       <SongButtons
         songRef={songRef}
         handleNextSong={handleNextSong}

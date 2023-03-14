@@ -1,11 +1,13 @@
 import React, { FC, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useLocalStorage from '../hooks/useLocalStorage';
+import { useAppSelector } from '../hooks/useTypedSelector';
 
 const Timelapse: FC = () => {
   const [time, setTime] = useState<string>('');
   const [date, setDate] = useState<string>('');
   const [name, setName] = useLocalStorage('name', '');
+  const { time: isShowTime } = useAppSelector((state) => state.settings.isShow);
   const { t } = useTranslation();
 
   const showTime = (lang: string | null): void => {
@@ -65,12 +67,16 @@ const Timelapse: FC = () => {
     localStorage.setItem('name', JSON.stringify(e.target.value));
   };
 
-  // useEffect(() => {
-  //   showTime(localStorage.getItem('i18nextLng'));
-  // }, [localStorage.getItem('i18nextLng')]);
+  useEffect(() => {
+    showTime(localStorage.getItem('i18nextLng'));
+  }, [localStorage.getItem('i18nextLng')]);
 
   return (
-    <div className="flex flex-col gap-2 md:gap-4 items-center text-white">
+    <div
+      className={`flex flex-col gap-2 md:gap-4 items-center text-white ${
+        isShowTime ? 'hidden' : ''
+      } transition-all duration-500`}
+    >
       <div className="text-6xl font-semibold tracking-widest md:text-8xl">{time}</div>
       <div className="text-2xl md:text-4xl">{date}</div>
       <div className="grid grid-cols-2 items-center gap-2">

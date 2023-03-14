@@ -10,6 +10,7 @@ const Weather: FC = () => {
   const [city, setCity] = useLocalStorage('city', 'Gomel');
   const dispatch = useAppDispatch();
   const { weatherData, error } = useAppSelector((state) => state.weather);
+  const { weather } = useAppSelector((state) => state.settings.isShow);
   const errorMsg = error as string;
   const { t } = useTranslation();
   const debounce = useDebounce(city, 500);
@@ -29,7 +30,11 @@ const Weather: FC = () => {
   }, [debounce, localStorage.getItem('i18nextLng')]);
 
   return (
-    <div className="flex flex-col gap-2 text-white">
+    <div
+      className={`flex flex-col gap-2 text-white ${
+        weather ? 'hidden' : ''
+      } transition-all duration-500`}
+    >
       <input
         value={city || ''}
         onChange={handleChangeCity}
