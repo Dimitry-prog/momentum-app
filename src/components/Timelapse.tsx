@@ -67,9 +67,9 @@ const Timelapse: FC = () => {
     localStorage.setItem('name', JSON.stringify(e.target.value));
   };
 
-  useEffect(() => {
-    showTime(localStorage.getItem('i18nextLng'));
-  }, [localStorage.getItem('i18nextLng')]);
+  // useEffect(() => {
+  //   showTime(localStorage.getItem('i18nextLng'));
+  // }, [localStorage.getItem('i18nextLng')]);
 
   return (
     <div
