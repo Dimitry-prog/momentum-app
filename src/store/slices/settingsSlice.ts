@@ -7,14 +7,16 @@ type SettingsState = {
   isShow: IShowSettings;
 };
 
+const isShowExist = localStorage.getItem('settings');
+
 const initialState: SettingsState = {
   isOpenSettings: false,
   isShow: {
-    player: false,
-    weather: false,
-    time: false,
-    quote: false,
-    slider: false,
+    player: isShowExist ? JSON.parse(isShowExist).player : true,
+    weather: isShowExist ? JSON.parse(isShowExist).weather : true,
+    time: isShowExist ? JSON.parse(isShowExist).time : true,
+    quote: isShowExist ? JSON.parse(isShowExist).quote : true,
+    slider: isShowExist ? JSON.parse(isShowExist).slider : true,
   },
 };
 
@@ -29,18 +31,23 @@ const settingsSlice = createSlice({
       switch (payload) {
         case settingsWidget.player:
           state.isShow.player = !state.isShow.player;
+          localStorage.setItem('settings', JSON.stringify(state.isShow));
           break;
         case settingsWidget.weather:
           state.isShow.weather = !state.isShow.weather;
+          localStorage.setItem('settings', JSON.stringify(state.isShow));
           break;
         case settingsWidget.time:
           state.isShow.time = !state.isShow.time;
+          localStorage.setItem('settings', JSON.stringify(state.isShow));
           break;
         case settingsWidget.quote:
           state.isShow.quote = !state.isShow.quote;
+          localStorage.setItem('settings', JSON.stringify(state.isShow));
           break;
         case settingsWidget.slider:
           state.isShow.slider = !state.isShow.slider;
+          localStorage.setItem('settings', JSON.stringify(state.isShow));
           break;
       }
     },

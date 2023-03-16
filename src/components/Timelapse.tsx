@@ -67,14 +67,14 @@ const Timelapse: FC = () => {
     localStorage.setItem('name', JSON.stringify(e.target.value));
   };
 
-  // useEffect(() => {
-  //   showTime(localStorage.getItem('i18nextLng'));
-  // }, [localStorage.getItem('i18nextLng')]);
+  useEffect(() => {
+    showTime(localStorage.getItem('i18nextLng'));
+  }, [localStorage.getItem('i18nextLng')]);
 
   return (
     <div
       className={`flex flex-col gap-2 md:gap-4 items-center text-white ${
-        isShowTime ? 'hidden' : ''
+        isShowTime ? '' : 'opacity-0 invisible'
       } transition-all duration-500`}
     >
       <div className="text-6xl font-semibold tracking-widest md:text-8xl">{time}</div>

@@ -32,7 +32,7 @@ const Weather: FC = () => {
   return (
     <div
       className={`flex flex-col gap-2 text-white ${
-        weather ? 'hidden' : ''
+        weather ? '' : 'opacity-0 invisible'
       } transition-all duration-500`}
     >
       <input

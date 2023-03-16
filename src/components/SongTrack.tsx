@@ -19,14 +19,14 @@ const SongTrack: FC<SongTrackProps> = ({
   const isActiveSong = isPlaying && song === currentSong;
 
   return (
-    <div>
+    <>
       <p className={`${isActiveSong ? `font-bold` : ``} text-white text-lg`}>
         {song.title} | {song.duration}
       </p>
       <audio src={currentSong.src} ref={songRef} onEnded={handleNextSong}>
         Your browser does not support the audio tag.
       </audio>
-    </div>
+    </>
   );
 };
 

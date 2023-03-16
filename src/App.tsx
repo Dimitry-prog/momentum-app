@@ -31,9 +31,7 @@ const App = () => {
   return (
     <div
       style={{ backgroundImage: `url(${image})` }}
-      className={`w-screen h-screen p-2 flex flex-col justify-between md:p-10 relative bg-blend-overlay bg-black/40 bg-cover bg-center transition-all delay-150 duration-1000 ${
-        slider ? "bg-[url('./images/test.jpg')]" : ''
-      }`}
+      className={`w-screen h-screen p-2 flex flex-col justify-between md:p-10 relative bg-blend-overlay bg-black/40 bg-cover bg-center transition-all delay-150 duration-1000`}
     >
       <header className="flex justify-between">
         <Player />
@@ -41,20 +39,20 @@ const App = () => {
       </header>
 
       <main className="relative">
-        {!slider && (
-          <>
-            <button
-              onClick={handleOtherSlide}
-              className="absolute left-0 top-[50%] w-12 h-12 bg-cover bg-center bg-[url('./images/slider-prev.svg')] opacity-80 hover:opacity-100 duration-500"
-              type="button"
-            ></button>
-            <button
-              onClick={handleOtherSlide}
-              className="absolute right-0 top-[50%] w-12 h-12 bg-cover bg-center bg-[url('./images/slider-next.svg')] opacity-80 hover:opacity-100 duration-500"
-              type="button"
-            ></button>
-          </>
-        )}
+        <button
+          onClick={handleOtherSlide}
+          className={`${
+            slider ? 'opacity-80' : 'opacity-0 invisible'
+          } absolute left-0 top-[50%] w-12 h-12 bg-cover bg-center bg-[url('./images/slider-prev.svg')] hover:opacity-100 transition-all duration-500`}
+          type="button"
+        ></button>
+        <button
+          onClick={handleOtherSlide}
+          className={`${
+            slider ? 'opacity-80' : 'opacity-0 invisible'
+          } absolute right-0 top-[50%] w-12 h-12 bg-cover bg-center bg-[url('./images/slider-next.svg')] hover:opacity-100 transition-all duration-500`}
+          type="button"
+        ></button>
         <Timelapse />
       </main>
 

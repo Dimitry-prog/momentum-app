@@ -25,7 +25,7 @@ const Quote = () => {
   return (
     <div
       className={`flex flex-col gap-2 md:gap-4 items-center text-white ${
-        isShowQuote ? 'hidden' : ''
+        isShowQuote ? '' : 'opacity-0 invisible'
       } transition-all duration-500`}
     >
       <button

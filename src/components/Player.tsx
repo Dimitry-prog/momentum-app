@@ -31,7 +31,11 @@ const Player = () => {
   };
 
   return (
-    <div className={`flex flex-col gap-y-5 ${player ? 'hidden' : ''} transition-all duration-500`}>
+    <div
+      className={`flex flex-col gap-y-5 ${
+        player ? '' : 'opacity-0 invisible'
+      } transition-all duration-500`}
+    >
       <SongButtons
         songRef={songRef}
         handleNextSong={handleNextSong}
