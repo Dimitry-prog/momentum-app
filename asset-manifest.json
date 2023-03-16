@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/momentum-app/static/css/main.03bb066c.css",
-    "main.js": "/momentum-app/static/js/main.d613372b.js",
+    "main.css": "/momentum-app/static/css/main.d13bd8de.css",
+    "main.js": "/momentum-app/static/js/main.30a27fa5.js",
     "static/media/summer_wind.mp3": "/momentum-app/static/media/summer_wind.b44bd629d4635aae13cb.mp3",
     "static/media/river_flows_in_you.mp3": "/momentum-app/static/media/river_flows_in_you.a656f498fb59c73243d1.mp3",
     "static/media/ennio_morricone.mp3": "/momentum-app/static/media/ennio_morricone.21bf1950ab63b478229a.mp3",
     "static/media/aqua_caelestis.mp3": "/momentum-app/static/media/aqua_caelestis.7c76faa5999017ffec2f.mp3",
+    "static/media/setting.svg": "/momentum-app/static/media/setting.ca6563258b253970c4e5.svg",
     "static/media/reload.svg": "/momentum-app/static/media/reload.91f316184109e60f0baf.svg",
     "index.html": "/momentum-app/index.html",
+    "static/media/cancel_icon.svg": "/momentum-app/static/media/cancel_icon.3433486aa0466116b954.svg",
     "static/media/play-prev.svg": "/momentum-app/static/media/play-prev.896b591f823abe420586.svg",
     "static/media/play-next.svg": "/momentum-app/static/media/play-next.0f3a610b0a2f93528cb6.svg",
     "static/media/getFetch.cjs": "/momentum-app/static/media/getFetch.40f37ddea2378391108f.cjs",
@@ -15,11 +17,11 @@
     "static/media/play.svg": "/momentum-app/static/media/play.61d46a084bd961ef0b33.svg",
     "static/media/slider-prev.svg": "/momentum-app/static/media/slider-prev.f5f3a4aa550dd30baa35.svg",
     "static/media/slider-next.svg": "/momentum-app/static/media/slider-next.320ea03df2fc81496da0.svg",
-    "main.03bb066c.css.map": "/momentum-app/static/css/main.03bb066c.css.map",
-    "main.d613372b.js.map": "/momentum-app/static/js/main.d613372b.js.map"
+    "main.d13bd8de.css.map": "/momentum-app/static/css/main.d13bd8de.css.map",
+    "main.30a27fa5.js.map": "/momentum-app/static/js/main.30a27fa5.js.map"
   },
   "entrypoints": [
-    "static/css/main.03bb066c.css",
-    "static/js/main.d613372b.js"
+    "static/css/main.d13bd8de.css",
+    "static/js/main.30a27fa5.js"
   ]
 }
