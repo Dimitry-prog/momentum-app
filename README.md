@@ -1,7 +1,8 @@
 # momentum-app
 
     description: 'momentum',
-    functionality: 'Featuring playlist, weather, daily photos, and encouraging quotes.',
+    functionality: 'Featuring playlist, weather, daily photos, encouraging quotes, 
+    timer and custom settings',
     stack: [
       "React", "Redux", "TypeSctipt", "Tailwind" , "API" 
     ],
